@@ -1,0 +1,169 @@
+/* 🎵 General page styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f4f7fa 0%, #e8f0f8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  margin: 0;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎧 Table container */
+table {
+  width: 90%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 🏷️ Table headers and cells */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background: linear-gradient(90deg, #3498db, #2e86de);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+
+tr {
+  transition: background-color 0.2s ease;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eef6ff;
+}
+
+/* 💿 Song images */
+img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ▶️ Video iframes */
+iframe {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 📐 Column Widths */
+td:nth-child(1) {
+  width: 30%;
+}
+
+td:nth-child(2) {
+  width: 10%;
+}
+
+td:nth-child(3) {
+  width: 15%;
+}
+
+td:nth-child(4) {
+  width: 45%;
+}
+
+/* 📱 Responsive behavior */
+@media (max-width: 768px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 45%;
+    text-align: left;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 40%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #555;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
