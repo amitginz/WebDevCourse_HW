@@ -1,0 +1,96 @@
+table {
+    border: 2px solid #3913d3;
+    border-collapse: collapse;
+    width: 500px;
+    margin: 40px auto;
+    /* מגדיל את הרווח מלמעלה */
+
+    /* --- כאן הקסם --- */
+    background-color: #ffffff;
+    /* רקע לבן נקי לטופס */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* מוסיף צל עדין */
+    border-radius: 8px;
+    /* מעגל פינות */
+    overflow: hidden;
+    /* חשוב כדי שהפינות המעוגלות יעבדו */
+}
+
+td,
+th {
+    border: 1px solid #1683b5;
+    padding: 10px;
+}
+
+/* עיצוב כותרת הטבלה */
+thead th {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+
+    /* --- שנה את זה --- */
+    background-color: #007bff;
+    /* כחול נחמד */
+    color: white;
+    /* טקסט לבן שיתאים */
+    padding: 18px;
+    /* יותר ריווח */
+}
+
+/* עיצוב גוף הטבלה */
+tbody td:first-child {
+    /* התא של הכותרת (Name:, Email:...) */
+    text-align: right;
+    font-weight: bold;
+    width: 25%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 98%;
+    /* גורם לשדות למלא את התא */
+    padding: 5px;
+    box-sizing: border-box;
+    /* כדי שה-padding לא ישבור את הרוחב */
+}
+
+textarea {
+    height: 120px;
+    /* גובה לתיבת הטקסט */
+    vertical-align: top;
+    /* מיישר את הטקסט בתיבה למעלה */
+}
+
+/* כשהתווית ליד תיבת טקסט גדולה, ניישר אותה למעלה */
+td.message-label {
+    vertical-align: top;
+}
+
+/* עיצוב תחתית הטבלה (כפתור) */
+tfoot td {
+    text-align: center;
+    /* ממקם את הכפתור באמצע */
+}
+
+button {
+    padding: 12px 20px;
+    /* כפתור גדול יותר */
+    background-color: #28a745;
+    /* רקע ירוק */
+    color: white;
+    /* טקסט לבן */
+    border: none;
+    /* בלי מסגרת */
+    border-radius: 5px;
+    /* פינות מעוגלות */
+    cursor: pointer;
+    /* הופך לסמן של לחיצה */
+    font-size: 1em;
+}
+
+/* אפקט נחמד למעבר עכבר */
+button:hover {
+    background-color: #218838;
+}
