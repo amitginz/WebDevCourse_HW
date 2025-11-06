@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio List</title>
+    <style>
+        /* תוכל להעתיק את כל הגוש הזה 
+   לתוך תגית <style> ב-HTML 
+   או לקובץ CSS נפרד 
+*/
+
+        /* עיצוב גוף הדף */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            /* רקע אפרפר בהיר */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* עיצוב הטבלה */
+        table {
+            width: 90%;
+            /* קצת יותר רחב */
+            max-width: 1200px;
+            /* רוחב מקסימלי */
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 10px;
+            /* פינות מעוגלות */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            /* צל יפה */
+            overflow: hidden;
+            /* חיוני לפינות המעוגלות */
+        }
+
+        th,
+        td {
+            padding: 15px 20px;
+            /* יותר ריווח פנימי */
+            text-align: left;
+            vertical-align: middle;
+            border-bottom: 1px solid #e0e0e0;
+            /* קו תחתון עדין במקום מסגרת מלאה */
+        }
+
+        /* עיצוב כותרות הטבלה */
+        th {
+            background: linear-gradient(90deg, #3498db, #2e86de);
+            /* גרדיאנט כמו בפלייליסט */
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        /* עיצוב שורות הטבלה */
+        tr:hover {
+            background-color: #f9f9f9;
+            /* אפקט ריחוף עדין */
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+            /* מסיר את הקו מהשורה האחרונה */
+        }
+
+        /* עיצוב התאים הספציפיים */
+        td {
+            text-align: center;
+            /* ממקם הכל למרכז התא */
+        }
+
+        /* עיצוב התמונות */
+        img {
+            width: 80px;
+            /* גודל אחיד */
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            /* פינות מעוגלות לתמונה */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* עיצוב נגן האודיו */
+        audio {
+            width: 100%;
+            min-width: 200px;
+            /* רוחב מינימלי */
+            max-width: 300px;
+            /* רוחב מקסימלי */
+        }
+
+        /* הפיכת הקישור "Download" לכפתור מעוצב */
+        a[download] {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #28a745;
+            /* צבע ירוק */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        a[download]:hover {
+            background-color: #218838;
+            /* ירוק כהה יותר בריחוף */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>My Audio List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Year</th>
+                <th>Play</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="Cover/yellow coldplay picture.jpg" alt="Song 1 Cover">
+                </td>
+                <td>Yellow</td>
+                <td>Coldplay</td>
+                <td>2000</td>
+                <td>
+                    <audio controls>
+                        <source src="AudioFiles/Coldplay - Yellow (Official Video).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <a href="AudioFiles/Coldplay - Yellow (Official Video).mp3" download>Download</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="Cover/homecoming kanye picture.jpg" alt="Song 2 Cover">
+                </td>
+                <td>Homecoming</td>
+                <td>Kanye West</td>
+                <td>2007</td>
+                <td>
+                    <audio controls>
+                        <source src="AudioFiles/Homecoming.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>
+                    <a href="AudioFiles/Homecoming.mp3" download>Download</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
