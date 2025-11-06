@@ -11,6 +11,20 @@
   font-weight: bold;
 }
 
+.song-link {
+  color: #3498db;
+  /* צבע ברירת מחדל לקישור (אופציונלי) */
+  text-decoration: none;
+  /* מסיר את הקו התחתון (אופציונלי) */
+}
+
+.song-link:hover {
+  color: #e74c3c;
+  /* צבע שונה שיופיע במעבר עכבר */
+  text-decoration: underline;
+  /* מחזיר קו תחתון בריחוף (אופציונלי) */
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(180deg, #f4f7fa 0%, #e8f0f8 100%);
