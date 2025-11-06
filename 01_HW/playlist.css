@@ -1,4 +1,16 @@
 /* 🎵 General page styling */
+.new-header {
+  background-color: blue;
+  color: white;
+}
+
+.highlight-row {
+  background-color: #e0f7fa;
+  font-size: 1.1em;
+  color: #004d40;
+  font-weight: bold;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(180deg, #f4f7fa 0%, #e8f0f8 100%);
@@ -167,5 +179,7 @@ td:nth-child(4) {
     height: 100px;
   }
 }
+
+
 
 /* update css */
