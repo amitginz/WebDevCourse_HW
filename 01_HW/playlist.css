@@ -1,6 +1,6 @@
 /* 🎵 General page styling */
 .new-header {
-  background-color: blue;
+  background: linear-gradient(90deg, #3498db, #2e86de);
   color: white;
 }
 
