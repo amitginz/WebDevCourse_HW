@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TubeTracker-Amit Ginzberg</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="p-4">
+    <div class="container">
+        <h1 class="text-center text-primary mb-4">🎵 Excercise Songs List</h1>
+
+        <div class="card border-primary mb-4">
+            <div class="card-body">
+                <form id="songForm" class="row g-2">
+                    <input type="hidden" id="songId">
+
+                    <div class="col-md-4">
+                        <input type="text" id="title" class="form-control" placeholder="Song Title" required>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="url" id="url" class="form-control" placeholder="YouTube URL" required>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" id="Rank" class="form-control" placeholder="Rank (1-10)" required min="1"
+                            max="10">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" id="submitBtn" class="btn btn-success w-100">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mb-3">
+            <form id="sortForm">
+                <input type="radio" id="sortName" name="sortOption" value="name" checked>
+                <label for="sortName">name(A-Z)</label><br>
+
+                <input type="radio" id="sortDate" name="sortOption" value="date">
+                <label for="sortDate">add-Date</label><br>
+
+                <input type="radio" id="sortRating" name="sortOption" value="rating">
+                <label for for="sortRating">Rank</label><br>
+            </form>
+        </div>
+        <input type="hidden" id="songId" value="">
+        <button id="viewToggleBtn" class="btn btn-secondary mb-3" onclick="toggleView()">
+            <i class="fas fa-th-large"></i> Cards View
+        </button>
+
+        <div id="songList">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
